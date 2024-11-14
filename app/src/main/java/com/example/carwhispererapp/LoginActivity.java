@@ -34,8 +34,20 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void signInUser() {
-        String username = usernameEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        String username = usernameEditText.getText().toString().trim();
+        String password = passwordEditText.getText().toString().trim();
+
+        if (username.isEmpty()) {
+            usernameEditText.setError("Username is required");
+            usernameEditText.requestFocus();
+            return;
+        }
+        if (password.isEmpty()) {
+            passwordEditText.setError("Password is required");
+            passwordEditText.requestFocus();
+            return;
+        }
+
         auth.signInWithEmailAndPassword(username, password)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -45,4 +57,28 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
+    private void handleAuthError(String errorCode) {
+        switch (errorCode) {
+            case "ERROR_INVALID_EMAIL":
+                usernameEditText.setError("Invalid email format");
+                usernameEditText.requestFocus();
+                break;
+
+            case "ERROR_WRONG_PASSWORD":
+                passwordEditText.setError("Incorrect password");
+                passwordEditText.requestFocus();
+                break;
+
+            case "ERROR_USER_NOT_FOUND":
+                usernameEditText.setError("No account with this email found");
+                usernameEditText.requestFocus();
+                break;
+
+            default:
+                Toast.makeText(this, "Authentication failed. Try again.", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+
 }

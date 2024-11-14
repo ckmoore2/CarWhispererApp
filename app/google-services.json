@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "893456400097",
+    "project_id": "carwhispererapp",
+    "storage_bucket": "carwhispererapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893456400097:android:72b088b8fd403d871a41a0",
+        "android_client_info": {
+          "package_name": "com.example.carwhispererapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBynRTpXT7ea3wWf508x56_6sBwC39-3eI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,9 @@
 # Car Whisperer App
+
 A mobile application that allows users to search for car parts, view detailed product information, and manage their shopping cart. The app supports user authentication, product search, and cart management using Java and Room Database.
 
 ## Features
+
 User Authentication:
 
 Register a new account with a username, password, and email.
@@ -30,7 +32,7 @@ Room Database: Local database for managing data.
 Retrofit (optional): For API integration, if needed for product data.
 Firebase Authentication (optional): For user authentication.
 
-# Getting Started
+# Getting Started:
 
 ## Prerequisites
 
@@ -42,7 +44,7 @@ Basic knowledge of Java and Android development
 
 ## Clone the repository:
 
-git clone https://github.com/yourusername/CarPartsApp.git
+git clone https://github.com/ckmoore2/CarWhispererApp.git
 Open the project in Android Studio.
 Sync the Gradle files to download dependencies.
 Run the project on an emulator or physical device.
@@ -95,24 +97,31 @@ productId	INT	Foreign key (Product)
 quantity	INT	Number of items
 
 ## How to Use
-Register or Log In:
+
+### Register or Log In:
 
 New users must create an account.
 Existing users can log in using their credentials.
-Search for Products:
+
+### Search for Products:
 
 Enter keywords to search for products in the database.
-View Product Details:
+
+### View Product Details:
 
 Click on a product to view detailed information.
-Add to Cart:
+
+### Add to Cart:
 
 Add desired products to your shopping cart.
 Update quantities as needed.
-Checkout (optional):
+
+### Checkout (optional):
 
 View the total price of the items in the cart (further integration required for payment).
-Future Enhancements
+
+## Future Enhancements
+
 Add online product data fetching using APIs.
 Implement secure authentication using Firebase Authentication.
 Include payment gateway integration for in-app purchases.

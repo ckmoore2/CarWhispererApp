@@ -7,7 +7,7 @@ import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,10 +37,10 @@ public class RegisterActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
 
         // Find views
-        nameEditText = findViewById(R.id.name_input);
-        emailEditText = findViewById(R.id.email_input);
-        usernameEditText = findViewById(R.id.username_input);
-        passwordEditText = findViewById(R.id.password_input);
+        nameEditText = findViewById(R.id.register_name_input);
+        emailEditText = findViewById(R.id.register_email_input);
+        usernameEditText = findViewById(R.id.register_username_input);
+        passwordEditText = findViewById(R.id.register_password_input);
         registerButton = findViewById(R.id.register_btn);
 
         // Set onClickListener for register button

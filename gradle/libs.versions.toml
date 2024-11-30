@@ -14,6 +14,10 @@ roomCommonJvm = "2.7.0-alpha11"
 roomCommon = "2.6.1"
 roomRuntimeAndroid = "2.7.0-alpha11"
 firebaseDatabase = "21.0.0"
+firebaseUiAuth = "8.0.2"
+roomRuntime = "2.7.0-alpha11"
+roomCompilerVersion = "2.7.0-alpha11"
+roomRuntimeVersion = "2.6.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -29,6 +33,10 @@ room-common-jvm = { group = "androidx.room", name = "room-common-jvm", version.r
 room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
 room-runtime-android = { group = "androidx.room", name = "room-runtime-android", version.ref = "roomRuntimeAndroid" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-ui-auth = { group = "com.firebaseui", name = "firebase-ui-auth", version.ref = "firebaseUiAuth" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntime" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompilerVersion" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntimeVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

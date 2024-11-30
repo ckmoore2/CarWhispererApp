@@ -6,7 +6,6 @@
 
 
     <TextView
-        android:id="@+id/appTitle"
         android:layout_width="match_parent"
         android:layout_height="98dp"
         android:text="Car Whisperer"
@@ -15,29 +14,23 @@
         android:textSize="48sp" />
 
     <EditText
-        android:id="@+id/userName_input"
+        android:id="@+id/login_username_input"
         android:layout_width="match_parent"
         android:layout_height="86dp"
         android:hint="Username" />
 
     <EditText
-        android:id="@+id/passWord_input"
+        android:id="@+id/login_password_input"
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:hint="Password"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/signIn_btn"
+        android:id="@+id/login_signIn_btn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:text="Sign In" />
-
-    <Button
-        android:id="@+id/signUp_btn"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:text="Sign Up" />
 
     <Button
         android:id="@+id/forgot_btn"

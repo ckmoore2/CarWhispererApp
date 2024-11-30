@@ -53,23 +53,20 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         // Send password reset email
         auth.sendPasswordResetEmail(email)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            // Show success message
-                            Toast.makeText(ResetPasswordActivity.this, "Reset email sent successfully", Toast.LENGTH_SHORT).show();
-                            finish(); // Close activity after success
-                        } else {
-                            // Handle errors
-                            handleResetPasswordError(task.getException());
-                        }
+                .addOnCompleteListener((OnCompleteListener<Void>) task -> {
+                    if (task.isSuccessful()) {
+                        // Show success message
+                        Toast.makeText(ResetPasswordActivity.this, "Reset email sent successfully", Toast.LENGTH_SHORT).show();
+                        finish(); // Close activity after success
+                    } else {
+                        // Handle errors
+                        handleResetPasswordError(task.getException());
                     }
                 });
     }
 
     private void handleResetPasswordError(Exception exception) {
-        if (exception instanceof FirebaseAuthInvalidUserException) {
+        if (exception != null) {
             // Specific error for invalid user
             emailEditText.setError("No account found with this email");
             emailEditText.requestFocus();
